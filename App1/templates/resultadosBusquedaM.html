@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">resultados de la busqueda de mascota</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% if mascotas %}
+
+<h2> listado de mascotas </h2>
+
+{% for mascota in mascotas %}
+
+<h3>{{ mascota.nombre }} - {{ mascota.edad }} - {{ mascota.anio_nacimiento }}</h3>
+
+{% endfor %}
+
+{% else %}
+
+<h2>NO EXISTE</h2>
+
+{% endif %}
+
+{% endblock %}

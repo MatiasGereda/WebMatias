@@ -1,0 +1,13 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Gabriel</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h2>Nombre= {{ Familiar1.nombre }}</h2>
+<h2>Edad= {{ Familiar1.edad }}</h2>
+<h2>Nacimiento= {{ Familiar1.anio_nacimiento }}</h2>
+{% endblock %}

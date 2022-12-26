@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO NUEVO VEHICULO</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'agregarVehiculo' %}" method="POST"> {% csrf_token %}
+
+    <p>Marca del vehiculo: <input type="text" name="marca"></p>
+    <p>Modelo: <input type="text" name="modelo"></p>
+    <p>año: <input type="number" name="anio"></p>
+
+    <input type="submit" value="Guardar Vehiculo">
+
+
+
+</form>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">resultados de la busqueda de vehiculos</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% if vehiculos %}
+
+<h2> listado de vehiculos </h2>
+
+{% for vehiculo in vehiculos %}
+
+<h3>{{ vehiculo.marca }} - {{ vehiculo.modelo }} - {{ vehiculo.anio }}</h3>
+
+{% endfor %}
+
+{% else %}
+
+<h2>NO EXISTE</h2>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">FORMULARIO NUEVA MASCOTA</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'agregarMascota' %}" method="POST"> {% csrf_token %}
+
+    <p>Nombre: <input type="text" name="nombre"></p>
+    <p>Edad: <input type="number" name="edad"></p>
+    <p>Año: <input type="date" name="anio_nacimiento"></p>
+
+    <input type="submit" value="Guardar Mascota">
+
+
+
+</form>
+
+{% endblock %}

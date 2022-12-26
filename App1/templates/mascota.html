@@ -1,0 +1,13 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1>Yvri</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+<h2>Nombre= {{ mascota1.nombre }}</h2>
+<h2>Edad= {{ mascota1.edad }}</h2>
+<h2>Nacimiento= {{ mascota1.anio_nacimiento }}</h2>
+{% endblock %}
